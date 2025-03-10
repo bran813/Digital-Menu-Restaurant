@@ -1,9 +1,11 @@
 # Práctica 3 - Modelado y Programación
 
 ## Descripción
+En esta práctica realizamos
 
-
-- **Patrones de Diseño**:
+- **Patrones de Diseño**: Los patrones a utilizar son Adapter y Decorator.
+- **Adapter**:
+- **Decorator**:
 
 
 ## Estructura del Proyecto
