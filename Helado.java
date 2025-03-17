@@ -19,10 +19,10 @@ public class Helado {
     }
 
     /**
-    * Agrega un sabor a la lista de sabores del helado.
-    *
-    * @param sabor El sabor que se va agregar.
-    */
+     * Agrega un sabor a la lista de sabores del helado.
+     *
+     * @param sabor El sabor que se va agregar.
+     */
     public void agregarSabor(String sabor) {
         sabores.add(sabor);
     }

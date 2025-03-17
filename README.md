@@ -1,15 +1,15 @@
 # Práctica 3 - Modelado y Programación
 
 ## Descripción
-En esta práctica realizamos
+En esta práctica realizamos un sistema virtual para un restaurante, como se pidió en la práctica.
 
 - **Patrones de Diseño**: Los patrones a utilizar son Adapter y Decorator.
-- **Adapter**:
-- **Decorator**:
+- **Adapter**: El adapter fue utilizado principalmente
+- **Decorator**: El decorator se utilizó para
 
 
 ## Estructura del Proyecto
-
+El proyecto consiste en
 
 ## Consideraciones del ejercicio
 

@@ -12,7 +12,8 @@ public class MenuHelados {
     private Scanner scanner;
 
     /**
-     * Constructor que inicializa el menú de helados y configura las opciones predeterminadas.
+     * Constructor que inicializa el menú de helados y configura las opciones
+     * predeterminadas.
      */
     public MenuHelados() {
         this.helados = new ArrayList<>();
@@ -117,7 +118,8 @@ public class MenuHelados {
     }
 
     /**
-     * Muestra los sabores disponibles de los helados (excepto para el Banana Split).
+     * Muestra los sabores disponibles de los helados (excepto para el Banana
+     * Split).
      */
     private void seleccionarSabor(Helado helado) {
         System.out.println("Has seleccionado: " + helado.getNombre() + "\n");
