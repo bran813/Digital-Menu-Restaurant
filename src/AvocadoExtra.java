@@ -1,5 +1,13 @@
 package src;
-
+/**
+ * Clase AvocadoExtra, que extiende SaucerDecorator.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
 public class AvocadoExtra extends SaucerDecorator {
     int extra = 80;
 
@@ -8,9 +16,9 @@ public class AvocadoExtra extends SaucerDecorator {
     }
 
     @Override
-    public void orderSaucer(){
+    public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Agregándole aguacate, son " + this.extra + "más" );
+        System.out.println("Agregándole aguacate, son " + this.extra + "más");
     }
 
     @Override
@@ -20,6 +28,6 @@ public class AvocadoExtra extends SaucerDecorator {
 
     @Override
     public String getCost() {
-        return this.order.getCost()  + " + " + Integer.toString(this.extra);
+        return this.order.getCost() + " + " + Integer.toString(this.extra);
     }
 }

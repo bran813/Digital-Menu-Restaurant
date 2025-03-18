@@ -1,5 +1,14 @@
 package src;
 
+/**
+ * Clase LemonsExtra, que extiende SaucerDecorator.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
 public class LemonsExtra extends SaucerDecorator {
     int extra = 95;
 
@@ -8,9 +17,9 @@ public class LemonsExtra extends SaucerDecorator {
     }
 
     @Override
-    public void orderSaucer(){
+    public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Agregándole limones, son " + this.extra + "más" );
+        System.out.println("Agregándole limones, son " + this.extra + "más");
     }
 
     @Override
@@ -20,8 +29,7 @@ public class LemonsExtra extends SaucerDecorator {
 
     @Override
     public String getCost() {
-        return this.order.getCost()  + " + " + Integer.toString(this.extra);
+        return this.order.getCost() + " + " + Integer.toString(this.extra);
     }
-
 
 }

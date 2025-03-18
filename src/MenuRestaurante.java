@@ -1,14 +1,27 @@
 package src;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MenuRestaurante implements Menu{
+/**
+ * Clase MenuRestaurante, que implementa Menu.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
+public class MenuRestaurante implements Menu {
     private List<Saucer> saucers;
     private List<Order> pedidos;
     private Scanner scanner;
 
-    MenuRestaurante(){
+    /**
+     * Inicializador de menú
+     */
+    MenuRestaurante() {
         this.saucers = new ArrayList<>();
         this.scanner = new Scanner(System.in);
         this.pedidos = new ArrayList<>();
@@ -16,7 +29,10 @@ public class MenuRestaurante implements Menu{
         this.initializeMenu();
     }
 
-    public void initializeMenu(){
+    /**
+     * Método void donde se muestran el menú
+     */
+    public void initializeMenu() {
         Saucer salads = new Saucer("Ensalada César", 400);
         Saucer salads2 = new Saucer("Ensalada de Surimi", 410);
         Saucer salads3 = new Saucer("Ensalada Rusa", 415);
@@ -34,6 +50,9 @@ public class MenuRestaurante implements Menu{
         this.saucers.add(aztecSoup);
     }
 
+    /**
+     * Método void donde se estructura el menú
+     */
     public void showMenu() {
         boolean seguirComprando = true;
         System.out.println("-----------------------------------------------------------");
@@ -42,10 +61,9 @@ public class MenuRestaurante implements Menu{
 
         while (seguirComprando) {
             for (int i = 0; i < saucers.size(); i++) {
-                if (i == 0){
+                if (i == 0) {
                     System.out.println("------ Ensaladas ------ \n");
-                }
-                else if (i == 3){
+                } else if (i == 3) {
                     System.out.println("------ Platos Fuertes ------ \n");
                 }
                 System.out.println((i + 1) + ". " + saucers.get(i).getName() + " $" + saucers.get(i).getCost());
@@ -59,7 +77,7 @@ public class MenuRestaurante implements Menu{
                 seguirComprando = false;
             } else if (opcion_platillo < 1 || opcion_platillo > saucers.size()) {
                 System.out.println("Opción inválida. Por favor, ingresa un número válido.");
-            } else{
+            } else {
                 Saucer platillo_escogido = saucers.get(opcion_platillo - 1);
                 Order orden_escogida = platillo_escogido;
 
@@ -71,13 +89,13 @@ public class MenuRestaurante implements Menu{
                 System.out.print("Ingresa el número de la opción que desees: ");
                 int opcion_estilo = scanner.nextInt();
 
-                if(opcion_estilo == 1){
+                if (opcion_estilo == 1) {
                     orden_escogida = new VeganSaucer(orden_escogida);
                 }
-                if(opcion_estilo == 2){
+                if (opcion_estilo == 2) {
                     orden_escogida = new VegetarianSaucer(orden_escogida);
                 }
-                if(opcion_estilo == 3){
+                if (opcion_estilo == 3) {
                     orden_escogida = new GlutenFreeSaucer(orden_escogida);
                 }
 
@@ -89,13 +107,13 @@ public class MenuRestaurante implements Menu{
                 System.out.print("Ingresa el número de la opción que desees: ");
                 int opcion_extra = scanner.nextInt();
 
-                if(opcion_extra == 1){
+                if (opcion_extra == 1) {
                     orden_escogida = new AvocadoExtra(orden_escogida);
                 }
-                if(opcion_extra == 2){
+                if (opcion_extra == 2) {
                     orden_escogida = new CheeseExtra(orden_escogida);
                 }
-                if(opcion_extra == 3){
+                if (opcion_extra == 3) {
                     orden_escogida = new LemonsExtra(orden_escogida);
                 }
                 pedidos.add(orden_escogida);

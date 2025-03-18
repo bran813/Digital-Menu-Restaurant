@@ -1,5 +1,14 @@
 package src;
 
+/**
+ * Clase CheeseExtra, que extiende SaucerDecorator.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
 public class CheeseExtra extends SaucerDecorator {
     int extra = 100;
 

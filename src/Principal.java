@@ -3,7 +3,22 @@ package src;
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * Clase Principal, es donde se corre el código.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
 public class Principal {
+    /**
+     * Método main, donde se crea el menú
+     * 
+     * @param args
+     * @throws FileNotFoundException un exception
+     */
     public static void main(String[] args) throws FileNotFoundException {
 
         PrintStream fileOut = new PrintStream(new File("output.txt"));
@@ -31,8 +46,3 @@ public class Principal {
         menu.showMenu();
     }
 }
-
-
-
-
-

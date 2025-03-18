@@ -1,16 +1,29 @@
 package src;
 
+/**
+ * Clase VegetarianSaucer, que extiende SaucerDecorator.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
 public class VegetarianSaucer extends SaucerDecorator {
     int extra = 400;
 
+    /**
+     * Constructor de VegetarianSucer
+     * @param order la orden
+     */
     VegetarianSaucer(Order order) {
         super(order);
     }
 
     @Override
-    public void orderSaucer(){
+    public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Convirtiéndolo a vegetariano, son " + this.extra + "más" );
+        System.out.println("Convirtiéndolo a vegetariano, son " + this.extra + "más");
     }
 
     @Override
@@ -20,6 +33,6 @@ public class VegetarianSaucer extends SaucerDecorator {
 
     @Override
     public String getCost() {
-        return this.order.getCost()  + " + " + Integer.toString(this.extra);
+        return this.order.getCost() + " + " + Integer.toString(this.extra);
     }
 }

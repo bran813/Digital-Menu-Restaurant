@@ -2,9 +2,24 @@ package src;
 
 import java.io.PrintStream;
 
+/**
+ * Clase MultiPrintStream, que extiende PrintStream. Se encarga del archivo.
+ * 
+ * @author Emilio Durán Tapia
+ * @author Alan Blancas Ochoa
+ * @author Brandon Zamorano Baños
+ * 
+ * @version 1.0
+ */
 public class MultiPrintStream extends PrintStream {
     private PrintStream second;
 
+    /**
+     * Constructor del MultiPrintStream
+     * 
+     * @param main
+     * @param second
+     */
     public MultiPrintStream(PrintStream main, PrintStream second) {
         super(main);
         this.second = second;
@@ -12,8 +27,8 @@ public class MultiPrintStream extends PrintStream {
 
     @Override
     public void write(byte[] buf, int off, int len) {
-        super.write(buf, off, len);    // Write to console
-        second.write(buf, off, len);   // Write to file
+        super.write(buf, off, len); // Write to console
+        second.write(buf, off, len); // Write to file
     }
 
     @Override
