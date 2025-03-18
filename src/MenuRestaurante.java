@@ -17,12 +17,20 @@ public class MenuRestaurante {
     }
 
     public void initializeMenu(){
-        Saucer salads = new Saucer("Ensalada", 400);
+        Saucer salads = new Saucer("Ensalada César", 400);
+        Saucer salads2 = new Saucer("Ensalada de Surimi", 410);
+        Saucer salads3 = new Saucer("Ensalada Rusa", 415);
         Saucer vegetableSoup = new Saucer("Sopa de Verduras", 350);
+        Saucer bolognesaSoup = new Saucer("Pasta a la boloñesa", 380);
+        Saucer chipotleSoup = new Saucer("Pasta al chipotle", 370);
         Saucer aztecSoup = new Saucer("Sopa Azteca", 550);
 
         this.saucers.add(salads);
+        this.saucers.add(salads2);
+        this.saucers.add(salads3);
         this.saucers.add(vegetableSoup);
+        this.saucers.add(bolognesaSoup);
+        this.saucers.add(chipotleSoup);
         this.saucers.add(aztecSoup);
     }
 
@@ -34,6 +42,12 @@ public class MenuRestaurante {
 
         while (seguirComprando) {
             for (int i = 0; i < saucers.size(); i++) {
+                if (i == 0){
+                    System.out.println("------ Ensaladas ------ \n");
+                }
+                else if (i == 3){
+                    System.out.println("------ Platos Fuertes ------ \n");
+                }
                 System.out.println((i + 1) + ". " + saucers.get(i).getName() + " $" + saucers.get(i).getCost());
             }
             System.out.println((saucers.size() + 1) + ".  Terminar.");
