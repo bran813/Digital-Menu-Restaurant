@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class MenuRestaurante {
+public class MenuRestaurante implements Menu{
     private List<Saucer> saucers;
     private List<Order> pedidos;
     private Scanner scanner;
@@ -34,7 +34,7 @@ public class MenuRestaurante {
         this.saucers.add(aztecSoup);
     }
 
-    public void mostrarMenu() {
+    public void showMenu() {
         boolean seguirComprando = true;
         System.out.println("-----------------------------------------------------------");
         System.out.println("                    Menú: Restaurante EL Puyol                   ");
@@ -56,7 +56,7 @@ public class MenuRestaurante {
             int opcion_platillo = scanner.nextInt();
 
             if (opcion_platillo == saucers.size() + 1) {
-                seguirComprando = false; // Finaliza el pedido.
+                seguirComprando = false;
             } else if (opcion_platillo < 1 || opcion_platillo > saucers.size()) {
                 System.out.println("Opción inválida. Por favor, ingresa un número válido.");
             } else{
@@ -101,10 +101,10 @@ public class MenuRestaurante {
                 pedidos.add(orden_escogida);
             }
         }
-        mostrarResumenPedido();
+        showOrder();
     }
 
-    private void mostrarResumenPedido() {
+    private void showOrder() {
         if (pedidos.isEmpty()) {
             System.out.println("No has seleccionado ningún platillo.");
         } else {
@@ -119,7 +119,7 @@ public class MenuRestaurante {
 
                 total += 0;
                 for (String num : costos) {
-                    total += Integer.parseInt(num.trim()); // Convert to integer after trimming spaces
+                    total += Integer.parseInt(num.trim());
                 }
             }
             System.out.println("Número de productos: " + pedidos.size());
