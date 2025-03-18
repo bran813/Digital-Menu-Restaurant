@@ -5,7 +5,7 @@ En esta práctica realizamos un sistema virtual para un restaurante, como se pid
 
 - **Patrones de Diseño**: Los patrones a utilizar son Adapter y Decorator.
 - **Adapter**: El adapter fue utilizado principalmente para el menú de los helados y la salsa.
-- **Decorator**: El decorator se utilizó para
+- **Decorator**: El decorator se utilizó para añadir ingredientes extras a los platillos sin cambiar su estructura interna base.
 
 
 ## Estructura del Proyecto
