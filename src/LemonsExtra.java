@@ -19,7 +19,7 @@ public class LemonsExtra extends SaucerDecorator {
     @Override
     public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Agregándole limones, son " + this.extra + "más");
+        System.out.println("Agregandole limones, son " + this.extra + "mas");
     }
 
     @Override

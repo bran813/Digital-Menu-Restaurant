@@ -24,7 +24,7 @@ public class VeganSaucer extends SaucerDecorator {
     @Override
     public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Convirtiéndolo a vegano, son " + this.extra + "más");
+        System.out.println("Convirtiendolo a vegano, son " + this.extra + "mas");
     }
 
     @Override

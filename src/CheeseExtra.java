@@ -19,7 +19,7 @@ public class CheeseExtra extends SaucerDecorator {
     @Override
     public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Agregándole queso, son " + this.extra + "más");
+        System.out.println("Agregandole queso, son " + this.extra + "mas");
     }
 
     @Override

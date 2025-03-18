@@ -29,9 +29,9 @@ public class Principal {
         Scanner scanner = new Scanner(System.in);
         Menu menu;
 
-        System.out.println("Seleccione un menú:");
+        System.out.println("Seleccione un menu:");
         System.out.println("1. Restaurante");
-        System.out.println("2. Heladería");
+        System.out.println("2. Heladeria");
 
         int option = scanner.nextInt();
         if (option == 1) {
@@ -39,7 +39,7 @@ public class Principal {
         } else if (option == 2) {
             menu = new MenuHeladosAdapter(new MenuHelados());
         } else {
-            System.out.println("Opción no válida.");
+            System.out.println("Opcion no valida.");
             return;
         }
 

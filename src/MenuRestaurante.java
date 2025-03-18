@@ -33,11 +33,11 @@ public class MenuRestaurante implements Menu {
      * Método void donde se muestran el menú
      */
     public void initializeMenu() {
-        Saucer salads = new Saucer("Ensalada César", 400);
+        Saucer salads = new Saucer("Ensalada Cesar", 400);
         Saucer salads2 = new Saucer("Ensalada de Surimi", 410);
         Saucer salads3 = new Saucer("Ensalada Rusa", 415);
         Saucer vegetableSoup = new Saucer("Sopa de Verduras", 350);
-        Saucer bolognesaSoup = new Saucer("Pasta a la boloñesa", 380);
+        Saucer bolognesaSoup = new Saucer("Pasta a la bolonesa", 380);
         Saucer chipotleSoup = new Saucer("Pasta al chipotle", 370);
         Saucer aztecSoup = new Saucer("Sopa Azteca", 550);
 
@@ -56,7 +56,7 @@ public class MenuRestaurante implements Menu {
     public void showMenu() {
         boolean seguirComprando = true;
         System.out.println("-----------------------------------------------------------");
-        System.out.println("                    Menú: Restaurante EL Puyol                   ");
+        System.out.println("                    Menu: Restaurante EL Puyol                   ");
         System.out.println("-----------------------------------------------------------\n");
 
         while (seguirComprando) {
@@ -70,23 +70,23 @@ public class MenuRestaurante implements Menu {
             }
             System.out.println((saucers.size() + 1) + ".  Terminar.");
 
-            System.out.print("Ingresa el número de la opción que desees: ");
+            System.out.print("Ingresa el numero de la opción que desees: ");
             int opcion_platillo = scanner.nextInt();
 
             if (opcion_platillo == saucers.size() + 1) {
                 seguirComprando = false;
             } else if (opcion_platillo < 1 || opcion_platillo > saucers.size()) {
-                System.out.println("Opción inválida. Por favor, ingresa un número válido.");
+                System.out.println("Opción invalida. Por favor, ingresa un numero valido.");
             } else {
                 Saucer platillo_escogido = saucers.get(opcion_platillo - 1);
                 Order orden_escogida = platillo_escogido;
 
                 System.out.println("¿Deseas que tu " + platillo_escogido.getName() + " sea:");
-                System.out.println("1. Vegana (cuesta 300 más)");
-                System.out.println("2. Vegetariana (cuesta 400 más)");
-                System.out.println("3. Sin gluten (cuesta 500 más)");
+                System.out.println("1. Vegana (cuesta 300 mas)");
+                System.out.println("2. Vegetariana (cuesta 400 mas)");
+                System.out.println("3. Sin gluten (cuesta 500 mas)");
                 System.out.println("4. Ninguno");
-                System.out.print("Ingresa el número de la opción que desees: ");
+                System.out.print("Ingresa el numero de la opcion que desees: ");
                 int opcion_estilo = scanner.nextInt();
 
                 if (opcion_estilo == 1) {
@@ -104,7 +104,7 @@ public class MenuRestaurante implements Menu {
                 System.out.println("2. Queso (cuesta 100 más)");
                 System.out.println("3. Limones (cuesta 95 más)");
                 System.out.println("4. No");
-                System.out.print("Ingresa el número de la opción que desees: ");
+                System.out.print("Ingresa el numero de la opcion que desees: ");
                 int opcion_extra = scanner.nextInt();
 
                 if (opcion_extra == 1) {
@@ -140,7 +140,7 @@ public class MenuRestaurante implements Menu {
                     total += Integer.parseInt(num.trim());
                 }
             }
-            System.out.println("Número de productos: " + pedidos.size());
+            System.out.println("Numero de productos: " + pedidos.size());
             System.out.println("Total: $" + total);
         }
     }

@@ -19,7 +19,7 @@ public class GlutenFreeSaucer extends SaucerDecorator {
     @Override
     public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Convirtiéndolo a libre de gluten, son " + this.extra + "más");
+        System.out.println("Convirtiendolo a libre de gluten, son " + this.extra + "mas");
     }
 
     @Override

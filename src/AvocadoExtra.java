@@ -18,7 +18,7 @@ public class AvocadoExtra extends SaucerDecorator {
     @Override
     public void orderSaucer() {
         super.orderSaucer();
-        System.out.println("Agregándole aguacate, son " + this.extra + "más");
+        System.out.println("Agregandole aguacate, son " + this.extra + "mas");
     }
 
     @Override
