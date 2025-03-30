@@ -3,9 +3,7 @@ package src;
 /**
  * Interfaz Order. Donde se estructura cada orden.
  * 
- * @author Emilio Durán Tapia
- * @author Alan Blancas Ochoa
- * @author Brandon Zamorano Baños
+
  * 
  * @version 1.0
  */

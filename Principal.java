@@ -6,9 +6,7 @@ import java.util.Scanner;
 /**
  * Clase Principal, es donde se corre el código.
  * 
- * @author Emilio Durán Tapia
- * @author Alan Blancas Ochoa
- * @author Brandon Zamorano Baños
+
  * 
  * @version 1.0
  */
